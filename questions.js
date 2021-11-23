@@ -40,12 +40,12 @@ function onclickHandler(event) {
     if (answerText === questions[i].answer) {
         timer = timer;
         responsDiv.setAttribute("style", "color: green")
-        responsDiv.textContent = "Correct";
+        responsDiv.textContent = "YEY! Correct!";
     } else {
 
         responsDiv.setAttribute("style", "color: red")
-        responsDiv.textContent = "Wrong";
-        timer = timer - 10;
+        responsDiv.textContent = "Wrong Answer";
+        timer = timer - 20;
      }
     
 
