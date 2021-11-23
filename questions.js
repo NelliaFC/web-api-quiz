@@ -18,3 +18,15 @@ function setupTimer() {
         }
     }, 1000)
 }
+
+/* set up eventListener function fro on Click*/
+document. addEventListener('click', function (event) {
+   if (event.target ===btnElement) {
+    wrapperElement.style.display = 'none';
+    setupTimer();
+    dislayQuestions();
+}
+})
+
+/*On click handler function*/
+/*
