@@ -67,3 +67,27 @@ var liTag1 = document.createElement("li");
     liTag2.appendChild(btn)
     oderListEl.appendChild(liTag2);
     divContEL.appendChild(oderListEl);  
+
+    var liTag3 = document.createElement("li");
+    liTag3.setAttribute("class", "all_li")
+    var btn = document.createElement('button');
+    btn.setAttribute("class", "all_btn")
+    btn.textContent = holdq1Choice3;
+    liTag3.appendChild(btn)
+    oderListEl.appendChild(liTag3);
+    divContEL.appendChild(oderListEl);  
+
+    var liTag4 = document.createElement("li");
+    liTag4.setAttribute("class", "all_li")
+    var btn = document.createElement('button');
+    btn.setAttribute("class", "all_btn")
+    btn.textContent = holdq1Choice;
+    liTag4.appendChild(btn)
+    oderListEl.appendChild(liTag4);
+    divContEL.appendChild(oderListEl);  
+
+    var allBtnEl = Document.querySecectirAll(".all_btn")
+    allBtnEl.forEach(function (event {
+        eventaddEventListener('click, onclickHandler')
+    });
+    )
