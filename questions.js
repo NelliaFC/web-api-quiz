@@ -81,7 +81,7 @@ function onclickHandler(event) {
 }
 }
 
-  //** This event listner submit the initial and final score to the local storage */
+  /*create a function that stores final score */
 document.addEventListener("submit", function (event) {
     event.preventDefault();
     var initialInput = document.querySelector("#inputInitial").value;
@@ -96,12 +96,12 @@ document.addEventListener("submit", function (event) {
     }
 
 })
-/**This function will refresh the page and send user back to begining page when go back button is clicked */
+/*create function to refresh the page and send the user back */
 function init() {
      location.reload();
  
 }
-/**This function will  clear initial and score displayed on the final page */
+/*Create function to clear score */
 function clearScore() {
     initialAndScore.value = "";
 }
