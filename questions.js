@@ -20,9 +20,9 @@ function setupTimer() {
 }
 
 /* set up eventListener function on Click*/
-document. addEventListener('click', function (event) {
+document.addEventListener('click', function (event) {
    if (event.target ===btnElement) {
-    wrapperElement.style.display = 'none';
+    wrapperElement.style.display = "none";
     setupTimer();
     dislayQuestions();
 }
@@ -33,6 +33,7 @@ document. addEventListener('click', function (event) {
 
 var i = 0;
 function onclickHandler(event) {
+    
     if(timer<=0){
         clearInterval(timeCount);
         divContEL.style.display="none";
@@ -64,8 +65,6 @@ function onclickHandler(event) {
               clearInterval(timeCount);
             
           }, 500)
-      
-  
           divContEL.innerHTML = '';
      }
      /*Create a function for final score */
@@ -80,7 +79,20 @@ function onclickHandler(event) {
 
 }
 }
+/**function to show the last page  */
+function renderLastItem() {
+    var yourScore = localStorage.getItem("HighScores");
+     var yourInitial = localStorage.getItem("Initial");
+     if (yourScore && yourInitial === "") {
+        return
+    }
+    finishDiv.textContent = "";
+    var finaPageEl = document.querySelector(".final-page");
+    finaPageEl.style.visibility = "visible";
+    var initialAndScore = document.querySelector("#staticEmail");
+    initialAndScore.value = yourInitial + ":" + " " + yourScore;
 
+}
   /*create a function that stores final score */
 document.addEventListener("submit", function (event) {
     event.preventDefault();
