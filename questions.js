@@ -19,7 +19,7 @@ function setupTimer() {
     }, 1000)
 }
 
-/* set up eventListener function fro on Click*/
+/* set up eventListener function on Click*/
 document. addEventListener('click', function (event) {
    if (event.target ===btnElement) {
     wrapperElement.style.display = 'none';

@@ -9,14 +9,14 @@ var divContEL = document.querySelector(".divContainer");
 
 var questions = [
     {
-        title: "",
-        choices: [""],
-        answer: "",
+        title: "What are the different data types present in Java script",
+        choices: ["strings", "numbers", "booleans", "null", "all of the above"],
+        answer: "all of the above",
     },
     {
-        title: "",
-        choices: [""],
-        answer: "",
+        title: "What is a Nan property in JavaScript",
+        choices: ["Not-a-Null", "Not Nothing", "Not-a-Number", "all of the above"],
+        answer: "Not-a-Number",
     },
     {
         title: "",
