@@ -64,6 +64,6 @@ var liTag1 = document.createElement("li");
     var btn = document.createElement('button');
     btn.setAttribute("class", "all_btn")
     btn.textContent = holdq1Choice2;
-    liTag2.appendChild(btn)appendChild(btn)
+    liTag2.appendChild(btn)
     oderListEl.appendChild(liTag2);
     divContEL.appendChild(oderListEl);  
