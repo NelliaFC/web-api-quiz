@@ -50,3 +50,20 @@ function displayQuestions() {
 
     oderListEl.innerHTML = '';
 }
+var liTag1 = document.createElement("li");
+    liTag1.setAttribute("class", "all_li")
+    var btn = document.createElement('button');
+    btn.setAttribute("class", "all_btn")
+    btn.textContent = holdq1Choice1;
+    liTag1.appendChild(btn)
+    oderListEl.appendChild(liTag1);
+    divContEL.appendChild(oderListEl);
+
+    var liTag2 = document.createElement("li");
+    liTag2.setAttribute("class", "all_li")
+    var btn = document.createElement('button');
+    btn.setAttribute("class", "all_btn")
+    btn.textContent = holdq1Choice2;
+    liTag2.appendChild(btn)appendChild(btn)
+    oderListEl.appendChild(liTag2);
+    divContEL.appendChild(oderListEl);  
