@@ -9,17 +9,22 @@ var divContEL = document.querySelector(".divContainer");
 
 var questions = [
     {
-        title: "What are the different data types present in Java script",
+        title: "What are the different data types present in Java script?",
         choices: ["strings", "numbers", "booleans", "null", "all of the above"],
         answer: "all of the above",
     },
     {
-        title: "What is a Nan property in JavaScript",
+        title: "What is a Nan property in JavaScript?",
         choices: ["Not-a-Null", "Not Nothing", "Not-a-Number", "all of the above"],
         answer: "Not-a-Number",
     },
     {
-        title: "",
+        title: "What kind of brackets are used to create an array in JavaScript?",
+        choices: ["{}", "()", "{)", "[]"],
+        answer: "[]",
+    },
+    {
+        title: " ",
         choices: [""],
         answer: "",
     },
@@ -28,17 +33,7 @@ var questions = [
         choices: [""],
         answer: "",
     },
-    {
-        title: "",
-        choices: [""],
-        answer: "",
-    },
-    {
-        title: "",
-        choices: [""],
-        answer: "",
-    },
-]
+]  
 
 function displayQuestions() {
     var holdQ1Title = questions[i].title
@@ -49,7 +44,7 @@ function displayQuestions() {
     var holdq1Choice4 = questions[i].choices[3];
 
     oderListEl.innerHTML = '';
-}
+
 var liTag1 = document.createElement("li");
     liTag1.setAttribute("class", "all_li")
     var btn = document.createElement('button');
@@ -90,4 +85,4 @@ var liTag1 = document.createElement("li");
     allBtnEl.forEach(function (event) {
         eventaddEventListener('click', onclickHandler)
     });
-    
+}

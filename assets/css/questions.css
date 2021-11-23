@@ -19,3 +19,29 @@ body{
      width: 900px; 
      visibility: hidden;
  }
+
+ .all_btn{
+    background: darkolivegreen;  
+    padding: 10px;
+    margin: 10px;
+    width: 30%; 
+    border: 1px solid bisque;
+    border-radius: 5px;
+    color: white;   
+    font-size: 1.em;
+    text-align: center;
+    cursor: pointer;
+    
+    
+}
+.myBtn{
+    background: darkolivegreen; 
+    padding: 10px;
+    margin: 10px; 
+    border: 1px solid bisque;
+    border-radius: 5px;
+    color: white;   
+    font-size: 1.em;
+    
+
+}
