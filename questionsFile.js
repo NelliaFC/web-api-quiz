@@ -38,6 +38,15 @@ var questions = [
         choices: [""],
         answer: "",
     },
-
-
 ]
+
+function displayQuestions() {
+    var holdQ1Title = questions[i].title
+    hElement.textContent = holdQ1Title
+    var holdq1Choice1 = questions[i].choices[0];
+    var holdq1Choice2 = questions[i].choices[1];
+    var holdq1Choice3 = questions[i].choices[2];
+    var holdq1Choice4 = questions[i].choices[3];
+
+    oderListEl.innerHTML = '';
+}
