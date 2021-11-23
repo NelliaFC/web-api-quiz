@@ -1,10 +1,7 @@
-/*setting timer*/
-
+/**set the time to zero*/
 var timer = 60;
 var timeCount;
-
-/*set up timer to count off from the start of the quiz*/
-
+/**this is the timer funtion which will start counting as soon as the quiz starts*/
 function setupTimer() {
     timeCount = setInterval(function () {
         timer--;
@@ -18,22 +15,22 @@ function setupTimer() {
         }
     }, 1000)
 }
+ 
+/**  Here is the event listener to start the timer and hide the quiz button*/
+document.addEventListener("click", function (event) {
+    if (event.target === btnElement) {
+        wrapperElement.style.display = "none";
+        setupTimer()
+        displayQuestions();
+    }
 
-/* set up eventListener function on Click*/
-document.addEventListener('click', function (event) {
-   if (event.target ===btnElement) {
-    wrapperElement.style.display = "none";
-    setupTimer();
-    dislayQuestions();
-}
 })
 
-/*On click handler function*/
-/*Create a function to display each question on click of the button*/
 
 var i = 0;
+
 function onclickHandler(event) {
-    
+     
     if(timer<=0){
         clearInterval(timeCount);
         divContEL.style.display="none";
@@ -48,38 +45,39 @@ function onclickHandler(event) {
 
         responsDiv.setAttribute("style", "color: red")
         responsDiv.textContent = "Wrong";
-        timer = timer - 15;
+        timer = timer - 10;
      }
     
-     if  (i<questions.length-1) {
-        i++;
 
+    if (i < questions.length-1) {
+
+      i++;
+
+      setTimeout(function () {
+      displayQuestions();
+      responsDiv.textContent = "";
+    }, 1000)
+    }else {
         setTimeout(function () {
-        displayQuestions();
-        responsDiv.textContent = "";
-      }, 1000)
-      }else {
-          setTimeout(function () {
-              responsDiv.textContent = "";
-              displayResult();
-              clearInterval(timeCount);
-            
-          }, 500)
-          divContEL.innerHTML = '';
+            responsDiv.textContent = "";
+            displayResult();
+            clearInterval(timeCount);
+          
+        }, 500)
+        divContEL.innerHTML = '';
      }
-     /*Create a function for final score */
+     
+    function displayResult() {
+        finishDiv.style.visibility = "visible";
+        timeElement.textContent = "Time:" + " " + timer;
+        var HighScores = timer;
+        localStorage.getItem(HighScores)
+        finalScore.textContent = "Your finally score is: " + HighScores;
+         localStorage.setItem("HighScores", HighScores)
  
- function displayResult() {
-    finishDiv.style.visibility = "visible";
-    timeElement.textContent = "Time:" + " " + timer;
-    var HighScores = timer;
-    localStorage.getItem(HighScores)
-    finalScore.textContent = "Your finally score is: " + HighScores;
-     localStorage.setItem("HighScores", HighScores)
+    }
+}
 
-}
-}
-/**function to show the last page  */
 function renderLastItem() {
     var yourScore = localStorage.getItem("HighScores");
      var yourInitial = localStorage.getItem("Initial");
@@ -93,7 +91,8 @@ function renderLastItem() {
     initialAndScore.value = yourInitial + ":" + " " + yourScore;
 
 }
-  /*create a function that stores final score */
+ 
+
 document.addEventListener("submit", function (event) {
     event.preventDefault();
     var initialInput = document.querySelector("#inputInitial").value;
@@ -108,12 +107,12 @@ document.addEventListener("submit", function (event) {
     }
 
 })
-/*create function to refresh the page and send the user back */
+
 function init() {
      location.reload();
  
 }
-/*Create function to clear score */
+
 function clearScore() {
     initialAndScore.value = "";
 }
