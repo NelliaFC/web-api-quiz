@@ -2,7 +2,9 @@ var timeElement = document.querySelector("#time");
 var wrapperElement = document.querySelector(".wrapper");
 var btnElement = document.querySelector("#start");
 var divContEL = document.querySelector(".divContainer");
-
+var oderListEl = document.querySelector("#q-list");
+var finishDiv = document.querySelector(".finish-section");
+var finalScore = document.querySelector("#result");
 
 
 /*question array*/

@@ -54,4 +54,29 @@ body{
         /* cursor: pointer;  */
         
         }
+        .wrapper{
+            margin: 0px;
+            text-align: justify;
+            word-wrap: break-word;
+            width: 100%;
+        }
+    
+            
+        h2{
+            text-align: left;
+        }
+    
+        .finish-section{
+            margin: 0px; 
+            width: 100%; 
+            visibility: hidden;
+        }
+        
+        .final-page{
+    
+            margin: 0px; 
+            width: 100%; 
+            visibility: hidden;
+         }
+    }
     
