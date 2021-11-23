@@ -87,7 +87,7 @@ var liTag1 = document.createElement("li");
     divContEL.appendChild(oderListEl);  
 
     var allBtnEl = Document.querySecectirAll(".all_btn")
-    allBtnEl.forEach(function (event {
-        eventaddEventListener('click, onclickHandler')
+    allBtnEl.forEach(function (event) {
+        eventaddEventListener('click', onclickHandler)
     });
-    )
+    
