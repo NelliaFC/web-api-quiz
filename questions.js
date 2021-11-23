@@ -81,4 +81,29 @@ function onclickHandler(event) {
 }
 }
 
-   
+  //** This event listner submit the initial and final score to the local storage */
+document.addEventListener("submit", function (event) {
+    event.preventDefault();
+    var initialInput = document.querySelector("#inputInitial").value;
+    if (initialInput === "") {
+        errMsg.setAttribute("style", "color: red")
+        errMsg.textContent = "Initial input field cannot be empty"
+    } else {
+        errMsg.textContent = "";
+        localStorage.getItem(initialInput)
+        localStorage.setItem("Initial", initialInput)
+         renderLastItem()
+    }
+
+})
+/**This function will refresh the page and send user back to begining page when go back button is clicked */
+function init() {
+     location.reload();
+ 
+}
+/**This function will  clear initial and score displayed on the final page */
+function clearScore() {
+    initialAndScore.value = "";
+}
+
+  
